@@ -32,23 +32,18 @@ function getPokemon(numberPokemon) {
             //insertamos el nombre en el html
             var texto = document.getElementById("pokemonName");
             let pokemonName = pokemons.name;
-            texto.innerHTML = "Pokémon name: " + pokemonName;
+            texto.innerHTML = pokemonName;
 
-            //insertamos la imagen en el html
-            //   var imagen = document.getElementById("card");
+
             let pokemonImage = pokemons.sprites.front_default;
-            //imagen.innerHTML = "<img src=" + pokemonImage + " width=\'150px\' height=\'150px\'>";
-            /*   imagen.appendChild("<img class="
-                   'card-img-top'
-                   " src=" + pokemonImage + " alt ="
-                   'Card image cap'
-                   ">"); */
+
+            var divImagen = document.getElementById("pokemonImage");
             var imagen = document.createElement("img");
             imagen.setAttribute("src", pokemonImage);
             imagen.setAttribute("class", "card-img-top");
             imagen.setAttribute("alt", "Card image cap");
-            var card = document.getElementById("card");
-            card.insertBefore(imagen)
+            divImagen.appendChild(imagen)
+
 
 
         });
